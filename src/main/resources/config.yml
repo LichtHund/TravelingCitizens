@@ -1,0 +1,46 @@
+# How long the NPC will stay spawned / in seconds
+npc-stay-time: 300
+
+# How often it'll spawn try to spawn / in seconds
+npc-repeat: 3600
+
+# Chance of it spawning in that hour
+chance: 5
+
+# Messages to display when it spawns
+# [broadcast] - Broadcasts the message to everyone online.
+# [title] - Displays a title for the player that is opening. Usage: [title] TITLE | Subtitle | TIME IT'LL SHOW (int seconds)
+# Example: [title] Title will be this | This will be subtitle | 5
+# Can also be [particle], with this one it'll spawn a particle there
+# Example: [particle] CLOUD
+# For some reason this one was funky, and sometimes wouldn't sync with the NPC spawning, still looked cool though
+spawn-messages:
+  - '[broadcast] &cSpawn broadcast!'
+  - '[title] &cSpawn title!'
+
+# Messages to display when despawns
+# Same as the spawn messages
+despawn-messages:
+  - '[broadcast] &cDespawn Broadcast!'
+  - '[title] &cDespawn title!'
+
+# Marks the location to spawn the NPC in
+npc-location:
+
+# Data to customize the NPC
+npc-data:
+  # The name you want the NPC to have
+  display-name: "&3Trader"
+  # Sets if NPC should have look close on
+  look-close: true
+  # The texture data generated on https://mineskin.org/ for custom texture
+  texture-data: ""
+  # The texture signature also generated on https://mineskin.org/
+  texture-signature: ""
+  # Commands to spawn with the NPC, same structure as CitizensCMD
+  # Add as many sets as you want, they'll be randomized, the NPC will spawn with only one set.
+  commands:
+    set-1:
+      - '[message] this is an example 1'
+    set-2:
+      - '[message] this is an example 2'

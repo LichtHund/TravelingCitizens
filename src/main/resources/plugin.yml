@@ -1,0 +1,19 @@
+name: TravelingCitizens
+version: ${project.version}
+main: me.mattstudios.travelingcitizens.TravelingCitizens
+api-version: 1.13
+softdepend: [Citizens, CitizensCMD]
+
+commands:
+  tc:
+    description: Performs all commands.
+  tc set:
+    description: Set's the position
+  tc reload:
+    description: Reloads config
+
+permissions:
+  travelingcitizens.reload:
+    default: op
+  travelingcitizens.set:
+    default: op
