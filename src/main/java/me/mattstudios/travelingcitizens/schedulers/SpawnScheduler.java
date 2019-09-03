@@ -19,7 +19,7 @@ public class SpawnScheduler implements Runnable {
     public void run() {
         if (!plugin.getConfig().contains("npc-location") || Objects.requireNonNull(plugin.getConfig().getString("npc-location")).isEmpty()) return;
 
-
+        System.out.println("trying");
 
         npcSpawnHandler.trySpawn();
     }

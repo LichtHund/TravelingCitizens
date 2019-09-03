@@ -8,7 +8,12 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Random;
+import java.util.Set;
+import java.util.UUID;
 
 public class Utils {
 
@@ -111,12 +116,14 @@ public class Utils {
     }
 
     public static void checkSpawnedNPC(TravelingCitizens plugin) {
-        if (!plugin.getConfig().contains("last-id")) return;
+        if (!plugin.getConfig().contains("npc-id")) return;
 
-        int id = plugin.getConfig().getInt("last-id");
+        int id = plugin.getConfig().getInt("npc-id");
         NPC npc = CitizensAPI.getNPCRegistry().getById(id);
         if (npc == null) return;
-        npc.destroy();
+        if (npc.isSpawned()) {
+            npc.despawn();
+        }
     }
 
 }

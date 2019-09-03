@@ -7,6 +7,9 @@ npc-repeat: 3600
 # Chance of it spawning in that hour
 chance: 5
 
+#
+npc-id: 0
+
 # Messages to display when it spawns
 # [broadcast] - Broadcasts the message to everyone online.
 # [title] - Displays a title for the player that is opening. Usage: [title] TITLE | Subtitle | TIME IT'LL SHOW (int seconds)
@@ -29,6 +32,8 @@ npc-location:
 
 # Data to customize the NPC
 npc-data:
+  # Sets the NPC type.
+  npc-type: PLAYER
   # The name you want the NPC to have
   display-name: "&3Trader"
   # Sets if NPC should have look close on

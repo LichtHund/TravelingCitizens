@@ -44,9 +44,6 @@ public class CommandHandler implements CommandExecutor, TabCompleter, IHandler {
         }
 
         if (args.length == 0 || args[0].isEmpty()) {
-            if (sender.hasPermission("citizenscmd.npcmd"))
-                if (sender instanceof Player)
-                    getCommand("help").execute((Player) sender, args);
             return true;
         }
 
